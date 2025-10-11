@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的网站 - 首页</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- 引入全局CSS -->
+</head>
+<body>
+    <!-- 1. 顶部导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="./list.html">科技新闻</a></li>
+            <li><a href="#">生活图片</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <!-- 2. 科技新闻栏目区块 -->
+    <section class="news-section">
+        <h2>科技头条</h2>
+        <div class="section-content">
+            <div class="text-content">
+                <ul>
+                    <li><a href="./detail.html">AI新突破：XX技术实现效率提升50%</a></li>
+                    <li><a href="#">手机新品发布：支持快充和折叠屏</a></li>
+                    <li><a href="#">全球芯片产能持续恢复，价格回落</a></li>
+                </ul>
+                <a href="./list.html" class="more-btn">查看更多 →</a> <!-- 跳转到列表页 -->
+            </div>
+            <div class="img-content">
+                <img src="../images/banner1.jpg" alt="科技新闻配图" width="300"> <!-- 引入图片 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 生活图片栏目区块（类似科技栏目的结构） -->
+    <section class="photo-section">
+        <h2>生活美图</h2>
+        <div class="section-content">
+            <img src="../images/photo1.jpg" alt="生活图片1" width="200">
+            <img src="../images/photo2.jpg" alt="生活图片2" width="200">
+            <img src="../images/photo3.jpg" alt="生活图片3" width="200">
+            <a href="#" class="more-btn">查看更多 →</a>
+        </div>
+    </section>
+
+    <!-- 4. 底部版权信息 -->
+    <footer>
+        <p>© 2025 我的网站 - 所有内容仅供演示</p>
+    </footer>
+</body>
+</html>
