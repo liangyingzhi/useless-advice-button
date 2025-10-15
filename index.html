@@ -2,52 +2,45 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的网站 - 首页</title>
-    <link rel="stylesheet" href="../css/style.css"> <!-- 引入全局CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无用建议工具箱 - 首页</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 1. 顶部导航栏 -->
-    <nav>
-        <ul>
-            <li><a href="../index.html">首页</a></li>
-            <li><a href="./list.html">科技新闻</a></li>
-            <li><a href="#">生活图片</a></li>
-            <li><a href="#">关于我们</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>🤔 无用建议工具箱</h1>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="list.html">建议列表</a>
+            <a href="form.html">提交建议</a>
+        </nav>
+    </header>
 
-    <!-- 2. 科技新闻栏目区块 -->
-    <section class="news-section">
-        <h2>科技头条</h2>
-        <div class="section-content">
-            <div class="text-content">
-                <ul>
-                    <li><a href="./detail.html">AI新突破：XX技术实现效率提升50%</a></li>
-                    <li><a href="#">手机新品发布：支持快充和折叠屏</a></li>
-                    <li><a href="#">全球芯片产能持续恢复，价格回落</a></li>
-                </ul>
-                <a href="./list.html" class="more-btn">查看更多 →</a> <!-- 跳转到列表页 -->
-            </div>
-            <div class="img-content">
-                <img src="../images/banner1.jpg" alt="科技新闻配图" width="300"> <!-- 引入图片 -->
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="welcome">
+            <h2>欢迎来到无用建议中心</h2>
+            <p>这里收集了各种毫无用处但很有趣的建议</p>
+        </section>
 
-    <!-- 3. 生活图片栏目区块（类似科技栏目的结构） -->
-    <section class="photo-section">
-        <h2>生活美图</h2>
-        <div class="section-content">
-            <img src="../images/photo1.jpg" alt="生活图片1" width="200">
-            <img src="../images/photo2.jpg" alt="生活图片2" width="200">
-            <img src="../images/photo3.jpg" alt="生活图片3" width="200">
-            <a href="#" class="more-btn">查看更多 →</a>
-        </div>
-    </section>
+        <section class="featured-advice">
+            <h3>热门无用建议</h3>
+            <ul>
+                <li>重启试试</li>
+                <li>多喝热水</li>
+                <li>明天再说</li>
+            </ul>
+            <a href="list.html">查看全部建议 →</a>
+        </section>
 
-    <!-- 4. 底部版权信息 -->
+        <section class="tools">
+            <h3>趣味工具</h3>
+            <p>无用建议按钮 · 随机决策器 · ...</p>
+            <a href="detail.html">体验工具 →</a>
+        </section>
+    </main>
+
     <footer>
-        <p>© 2025 我的网站 - 所有内容仅供演示</p>
+        <p>© 2023 无用建议工具箱 - 生活需要一点幽默感</p>
     </footer>
 </body>
 </html>
