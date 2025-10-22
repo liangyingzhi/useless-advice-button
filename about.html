@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于无用建议按钮</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+            nav a {
+                text-decoration: none;
+                color: #3498db;
+                font-weight: 500;
+                padding: 8px 15px;
+                border-radius: 4px;
+                transition: all 0.3s;
+            }
+
+                nav a:hover {
+                    background-color: #ecf0f1;
+                }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+            .section h2 {
+                font-size: 2rem;
+                color: #2c3e50;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .section p {
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+            }
+
+            .section ul {
+                padding-left: 25px;
+                margin-bottom: 15px;
+            }
+
+            .section li {
+                margin-bottom: 10px;
+            }
+
+                .section li strong {
+                    color: #3498db;
+                }
+
+        .project-philosophy {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            border-radius: 0 4px 4px 0;
+        }
+
+            .project-philosophy p {
+                margin: 0;
+            }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">无用建议按钮</div>
+        <div class="tagline">一个极简主义的解压网站</div>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="useless-advice.html">无用建议按钮</a>
+            <a href="submit-advice.html">提交建议</a>
+            <a href="about.html">关于</a>
+        </nav>
+    </header>
+
+    <div class="about-container">
+        <div class="section">
+            <h2>项目简介</h2>
+            <p>无用建议按钮是一个极简主义的解压网站，用户点击一个大按钮，网站随机给出一条完全无用但幽默的建议。</p>
+            <p>项目灵感来源于日常生活中的选择困难和信息过载，通过提供"无用"的建议，为用户提供一种轻松幽默的解压方式。</p>
+        </div>
+
+        <div class="section">
+            <h2>为什么有趣</h2>
+            <p>反差感是核心趣味点。当人们真的遇到问题来寻求建议时，得到的却是"重启试试"、"多喝热水"、"明天再说"之类的废话，会让人会心一笑。</p>
+            <p>这不仅是一种幽默，更是一种对现代生活节奏的温和调侃——在信息爆炸的时代，有时"无用"反而是一种珍贵的放松。</p>
+        </div>
+
+        <div class="section">
+            <h2>为什么简单</h2>
+            <ul>
+                <li><strong>界面极简：</strong> 整个网站只有一个占据全屏的、设计精美的按钮，没有任何多余元素。</li>
+                <li><strong>逻辑简单：</strong> 点击按钮后，从预设的"无用建议"数组中随机选取一条显示出来，简单到一天就能完成核心功能。</li>
+                <li><strong>技术栈：</strong> 纯HTML/CSS/JavaScript，不需要后端开发，适合快速实现。</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>项目哲学</h2>
+            <div class="project-philosophy">
+                <p>我们相信，有时"无用"才是最有用的。在追求效率和实用性的世界里，一个简单的"无用建议"按钮，能让人暂时放下焦虑，会心一笑。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>未来计划</h2>
+            <ul>
+                <li>增加用户投稿功能，让建议库越来越丰富</li>
+                <li>添加更多主题分类，如"工作"、"学习"、"生活"等</li>
+                <li>开发移动端适配，让建议随时可用</li>
+                <li>增加建议分享功能，与朋友一起解压</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 无用建议按钮 · 一个极简主义的解压网站</p>
+        <p>灵感来自日常选择困难的幽默化解</p>
+    </footer>
+</body>
+</html>

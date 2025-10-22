@@ -1,18 +1,283 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <title>���ý����б�</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交新建议</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+            nav a {
+                text-decoration: none;
+                color: #3498db;
+                font-weight: 500;
+                padding: 8px 15px;
+                border-radius: 4px;
+                transition: all 0.3s;
+            }
+
+                nav a:hover {
+                    background-color: #ecf0f1;
+                }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+            .form-header h1 {
+                font-size: 2rem;
+                color: #2c3e50;
+                margin-bottom: 10px;
+            }
+
+            .form-header p {
+                color: #7f8c8d;
+                font-size: 1.1rem;
+            }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 500;
+                color: #2c3e50;
+                font-size: 1.1rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 1.1rem;
+                transition: border-color 0.3s;
+            }
+
+                .form-group input:focus,
+                .form-group textarea:focus {
+                    outline: none;
+                    border-color: #3498db;
+                    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+                }
+
+            .form-group textarea {
+                min-height: 150px;
+                resize: vertical;
+            }
+
+            .form-group .hint {
+                font-size: 0.9rem;
+                color: #7f8c8d;
+                margin-top: 5px;
+            }
+
+            .form-group .category {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin-top: 10px;
+            }
+
+                .form-group .category label {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 8px 15px;
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    transition: all 0.2s;
+                    background: #f8f9fa;
+                }
+
+                    .form-group .category label:hover {
+                        background: #e3f2fd;
+                    }
+
+                .form-group .category input {
+                    margin-right: 8px;
+                }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 14px 40px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+            .btn:hover {
+                background: #2c80b9;
+                transform: translateY(-2px);
+            }
+
+        .btn-secondary {
+            background: #e74c3c;
+            margin-left: 15px;
+        }
+
+            .btn-secondary:hover {
+                background: #c0392b;
+            }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
-    <header>...</header>
-    <main>
-        <h1>�������ý���</h1>
-        <ul>
-            <li><a href="detail.html?id=1">��������</a> - 2023-10-27</li>
-            <li><a href="detail.html?id=2">�����ˮ</a> - 2023-10-27</li>
-            <!-- ���ཨ�� -->
-        </ul>
-    </main>
+    <header>
+        <div class="logo">无用建议按钮</div>
+        <div class="tagline">帮助我们丰富无用建议库</div>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="useless-advice.html">无用建议按钮</a>
+            <a href="submit-advice.html">提交建议</a>
+            <a href="about.html">关于</a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <div class="form-header">
+            <h1>提交新建议</h1>
+            <p>请填写以下信息，帮助我们丰富建议库</p>
+        </div>
+
+        <form id="adviceForm">
+            <div class="form-group">
+                <label for="advice">建议内容</label>
+                <input type="text" id="advice" name="advice" required placeholder="例如：重启试试">
+                <div class="hint">建议内容应简短、幽默，且完全无用</div>
+            </div>
+
+            <div class="form-group">
+                <label for="author">您的昵称</label>
+                <input type="text" id="author" name="author" placeholder="例如：小明">
+                <div class="hint">昵称将显示在建议下方，可选</div>
+            </div>
+
+            <div class="form-group">
+                <label for="category">建议类型</label>
+                <select id="category" name="category">
+                    <option value="日常">日常</option>
+                    <option value="工作">工作</option>
+                    <option value="学习">学习</option>
+                    <option value="生活">生活</option>
+                    <option value="其他">其他</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>是否公开</label>
+                <div class="category">
+                    <label>
+                        <input type="radio" name="public" value="yes" checked>
+                        公开
+                    </label>
+                    <label>
+                        <input type="radio" name="public" value="no">
+                        私密（仅管理员可见）
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">提交建议</button>
+                <button type="reset" class="btn btn-secondary">重置</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2023 无用建议按钮 · 一个极简主义的解压网站</p>
+        <p>项目灵感来自日常选择困难的幽默化解</p>
+    </footer>
+
+    <script>
+        document.getElementById('adviceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const advice = document.getElementById('advice').value;
+            const author = document.getElementById('author').value;
+            const category = document.getElementById('category').value;
+            const publicStatus = document.querySelector('input[name="public"]:checked').value;
+
+            // 模拟表单提交
+            alert(`感谢提交！您的建议已收到：
+- 建议内容: ${advice}
+- 昵称: ${author || '匿名'}
+- 类型: ${category}
+- 公开状态: ${publicStatus === 'yes' ? '公开' : '私密'}`);
+
+            // 重置表单
+            this.reset();
+        });
+    </script>
 </body>
 </html>

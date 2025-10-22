@@ -3,44 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>无用建议工具箱 - 首页</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>无用建议按钮 | 一个极简主义的解压网站</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
+            padding: 10px;
+        }
+
+            nav a {
+                text-decoration: none;
+                color: #3498db;
+                font-weight: 500;
+                padding: 8px 15px;
+                border-radius: 4px;
+                transition: all 0.3s;
+                font-size: 1.1rem;
+            }
+
+                nav a:hover {
+                    background-color: #ecf0f1;
+                }
+
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+            .section h2 {
+                font-size: 2rem;
+                color: #2c3e50;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .section p {
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+            }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+            .feature h3 {
+                font-size: 1.3rem;
+                color: #2c3e50;
+                margin-bottom: 10px;
+            }
+
+        .cta-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+        }
+
+            .cta-button:hover {
+                background: #2c80b9;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+            }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>🤔 无用建议工具箱</h1>
+        <div class="logo">无用建议按钮</div>
+        <div class="tagline">点击按钮，获取一条完全无用但幽默的建议，缓解日常焦虑</div>
         <nav>
             <a href="index.html">首页</a>
-            <a href="list.html">建议列表</a>
-            <a href="form.html">提交建议</a>
+            <a href="useless-advice.html">无用建议按钮</a>
+            <a href="submit-advice.html">提交建议</a>
+            <a href="about.html">关于</a>
         </nav>
     </header>
 
-    <main>
-        <section class="welcome">
-            <h2>欢迎来到无用建议中心</h2>
-            <p>这里收集了各种毫无用处但很有趣的建议</p>
-        </section>
+    <div class="main-content">
+        <div class="section">
+            <h2>为什么有趣？</h2>
+            <p>反差感。当人们真的遇到问题来寻求建议时，得到的却是"重启试试"、"多喝热水"、"明天再说"之类的废话，会让人会心一笑。</p>
+            <p>这不是一个实用的解决方案，而是一种幽默的解压方式。在信息过载的时代，有时"无用"反而是一种珍贵的放松。</p>
+        </div>
 
-        <section class="featured-advice">
-            <h3>热门无用建议</h3>
-            <ul>
-                <li>重启试试</li>
-                <li>多喝热水</li>
-                <li>明天再说</li>
-            </ul>
-            <a href="list.html">查看全部建议 →</a>
-        </section>
+        <div class="section">
+            <h2>为什么简单？</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>界面极简</h3>
+                    <p>整个网站只有一个占据全屏的、设计精美的按钮，没有任何多余元素。</p>
+                </div>
+                <div class="feature">
+                    <h3>逻辑简单</h3>
+                    <p>点击按钮后，从预设的"无用建议"数组中随机选取一条显示出来，简单到一天就能完成核心功能。</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="tools">
-            <h3>趣味工具</h3>
-            <p>无用建议按钮 · 随机决策器 · ...</p>
-            <a href="detail.html">体验工具 →</a>
-        </section>
-    </main>
+        <div class="section">
+            <h2>开始体验</h2>
+            <p>点击下方按钮，获取一条无用但可能让你微笑的建议：</p>
+            <a href="useless-advice.html" class="cta-button">点我求建议！</a>
+        </div>
+    </div>
 
     <footer>
-        <p>© 2023 无用建议工具箱 - 生活需要一点幽默感</p>
+        <p>© 2023 无用建议按钮 · 一个极简主义的解压网站</p>
+        <p>项目灵感来自日常选择困难的幽默化解</p>
     </footer>
 </body>
 </html>
