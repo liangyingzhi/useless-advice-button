@@ -1,42 +1,57 @@
-/* 基础样式 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* styles.css - 放在根目录 */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 1200px;
-    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-header {
-    background: #f4f4f4;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-}
-
-nav a {
-    margin-right: 1rem;
-    text-decoration: none;
-    color: #007acc;
-}
-
-section {
-    margin: 2rem 0;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-footer {
+h1 {
+    color: #2c3e50;
     text-align: center;
-    margin-top: 2rem;
-    padding: 1rem;
-    border-top: 1px solid #ddd;
+    margin-bottom: 30px;
 }
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #2c8bc3;
+    }
+
+#adviceDisplay {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    min-height: 40px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #3498db;
+        font-weight: bold;
+    }
+
+        nav a:hover {
+            color: #2c8bc3;
+        }
