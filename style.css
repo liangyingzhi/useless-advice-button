@@ -1,92 +1,125 @@
+/* 全局重置 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* 页面整体样式 */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    background-color: #e8f0f5; /* ���ǳ���� */
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: #e8f0f5; /* 柔和浅灰蓝 */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-x: hidden;
+  position: relative; /* 为标题绝对定位提供基础 */
 }
 
+/* 顶部标题：放大一倍 + 上四分之一位置 + 深蓝色 */
 .title {
-    font-size: 1.8rem;
-    margin-bottom: 60px;
-    text-align: center;
-    opacity: 0.85;
+  font-size: 3.6rem; /* 原1.8rem × 2 */
+  color: #004080; /* 深蓝色 */
+  position: absolute;
+  top: 25%; /* 上四分之一位置 */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 0.9;
+  z-index: 5;
+  font-weight: bold;
 }
 
+/* 主按钮：放大一倍 + 保持 flex 居中（关键修复！） */
 .btn {
-    padding: 16px 40px;
-    font-size: 1.2rem;
-    background: white;
-    border: none;
-    border-radius: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
+  padding: 32px 80px; /* 原16px 40px × 2 */
+  font-size: 2.4rem; /* 原1.2rem × 2 */
+  background: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s; /* 只保留阴影过渡 */
+  z-index: 10;
 }
 
-    .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    }
-
-    .btn:active {
-        transform: translateY(0);
-    }
-
-/* ���ֲ� */
-.overlap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+.btn:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* 仅阴影变化 */
 }
 
-    .overlap.active {
-        opacity: 1;
-        visibility: visible;
-    }
+.btn:active {
+  transform: translateY(0); /* 保持原点击效果 */
+}
 
-/* ���鿨Ƭ */
+/* 遮罩层（保持原样） */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 建议卡片（保持原样） */
 .suggestion-card {
-    background: white;
-    padding: 32px 24px;
-    border-radius: 16px;
-    max-width: 90%;
-    width: 500px;
-    text-align: center;
-    font-size: 1.4rem;
-    line-height: 1.6;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    z-index: 1001;
-    transform: scale(0.95);
-    transition: transform 0.3s;
+  background: white;
+  padding: 32px 24px;
+  border-radius: 16px;
+  width: 25vw;
+  height: 18.75vw;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-break: break-word;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  transform: scale(0.95);
+  transition: transform 0.3s;
+  overflow: hidden;
 }
 
-.overlap.active .suggestion-card {
-    transform: scale(1);
+.overlay.active .suggestion-card {
+  transform: scale(1);
 }
 
-/* ��ֹ����ʱҳ����� */
+/* 锁定滚动（保持原样） */
 body.no-scroll {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+/* 响应式（保持原样） */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.8rem;
+    top: 20%;
+  }
+
+  .btn {
+    padding: 24px 60px;
+    font-size: 1.8rem;
+  }
+
+  .suggestion-card {
+    width: 80%;
+    height: 60%;
+    font-size: 1.2rem;
+    padding: 20px;
+  }
 }
