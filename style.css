@@ -77,26 +77,50 @@ body {
   visibility: visible;
 }
 
-/* 建议卡片（保持原样） */
+/* ========== 修改后的建议卡片 ========== */
 .suggestion-card {
   background: white;
-  padding: 32px 24px;
   border-radius: 16px;
   width: 25vw;
   height: 18.75vw;
-  text-align: center;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  word-break: break-word;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   z-index: 1001;
   transform: scale(0.95);
   transition: transform 0.3s;
   overflow: hidden;
+  position: relative; /* 必需：让内部绝对定位生效 */
+  /* 注意：不再设置 padding / text-align / font-size 等 */
 }
 
-.overlay.active .suggestion-card {
-  transform: scale(1);
+/* 卡片内建议文本：定位在 40% 高度，字体放大一倍 */
+.suggestion-text-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.0rem; /* 1.4rem × 2 */
+  line-height: 1.2;
+  text-align: center;
+  width: calc(100% - 48px); /* 预留左右边距 */
+  word-break: break-word;
+  color: #333;
+}
+
+/* 分享链接样式（保持不变） */
+.suggestion-share-link {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #4a90e2;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.suggestion-share-link:hover {
+  color: #2a6bb5;
+  text-decoration: underline;
 }
 
 /* 锁定滚动（保持原样） */
@@ -119,7 +143,10 @@ body.no-scroll {
   .suggestion-card {
     width: 80%;
     height: 60%;
-    font-size: 1.2rem;
-    padding: 20px;
+  }
+
+  .suggestion-text-content {
+    font-size: 2.2rem; /* 移动端稍小，避免溢出 */
+    width: calc(100% - 40px);
   }
 }
